@@ -11,7 +11,7 @@ public class Negation extends Expr {
 	}
 
 	public boolean value(Map<Variable, Boolean> map) {
-		return false;
+		return !(expr.value(map));
 	}
 
 	public void collectVariables(Set<Variable> set) {
@@ -19,6 +19,6 @@ public class Negation extends Expr {
 	}
 
 	public String toString() {
-		return "!" + expr.toString();
+		return "¬" + expr.toString();
 	}
 }

@@ -12,7 +12,7 @@ public class Equivalence extends Expr {
 	}
 
 	public boolean value(Map<Variable, Boolean> map) {
-		return false;
+		return expr0.value(map) == expr1.value(map);
 	}
 
 	public void collectVariables(Set<Variable> set) {
@@ -21,6 +21,6 @@ public class Equivalence extends Expr {
 	}
 
 	public String toString() {
-		return "(" + expr0.toString() + " == " + expr1.toString() + ")";
+		return "(" + expr0.toString() + " ↔ " + expr1.toString() + ")";
 	}
 }

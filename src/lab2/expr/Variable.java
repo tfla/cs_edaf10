@@ -11,7 +11,7 @@ public class Variable extends Expr {
 	}
 
 	public boolean value(Map<Variable, Boolean> map) {
-		return false;
+		return map.get(this);
 	}
 
 	public void collectVariables(Set<Variable> set) {

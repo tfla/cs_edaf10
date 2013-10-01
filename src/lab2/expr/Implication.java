@@ -12,7 +12,7 @@ public class Implication extends Expr {
 	}
 
 	public boolean value(Map<Variable, Boolean> map) {
-		return false;
+		return !(expr0.value(map) && !(expr1.value(map)));
 	}
 
 	public void collectVariables(Set<Variable> set) {
